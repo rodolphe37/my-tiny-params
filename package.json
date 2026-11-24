@@ -1,7 +1,29 @@
 {
   "name": "my-tiny-params",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.1",
+  "description": "Shorten URL parameters without touching the domain or breaking UTM tracking.",
+  "author": "Rodolphe Augusto",
+  "license": "MIT",
+  "homepage": "https://github.com/rodolphe37/my-tiny-params#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolphe37/my-tiny-params.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodolphe37/my-tiny-params/issues"
+  },
+  "keywords": [
+    "utm",
+    "url",
+    "shortener",
+    "query-string",
+    "tracking",
+    "analytics",
+    "pwa",
+    "react",
+    "vite"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",

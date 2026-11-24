@@ -136,3 +136,33 @@ describe('i18n', () => {
     expect(translate('en', 'decode.notFound', { param: 'tp' })).toContain('“tp”')
   })
 })
+
+describe('pages juridiques', () => {
+  it('fr et en ont la même structure', async () => {
+    const { legalDocs } = await import('../i18n/legal')
+    for (const kind of ['legal', 'terms'] as const) {
+      expect(legalDocs.en[kind].sections.map((s) => s.body.length)).toEqual(legalDocs.fr[kind].sections.map((s) => s.body.length))
+    }
+  })
+
+  it('cite l’éditeur, l’hébergeur et le copyright', async () => {
+    const { legalDocs, copyright } = await import('../i18n/legal')
+    for (const lang of ['fr', 'en'] as const) {
+      const text = JSON.stringify(legalDocs[lang])
+      expect(text).toContain('Rodolphe Augusto')
+      expect(text).toContain('Netlify')
+    }
+    expect(copyright(2026)).toBe('© 2026 Rodolphe Augusto')
+    expect(copyright(2028)).toBe('© 2026–2028 Rodolphe Augusto')
+  })
+})
+
+describe('routage', () => {
+  it('reconnaît les pages et retombe sur l’accueil', async () => {
+    const { routeFromPath } = await import('./route')
+    expect(routeFromPath('/legal')).toBe('legal')
+    expect(routeFromPath('/terms/')).toBe('terms')
+    expect(routeFromPath('/')).toBe('home')
+    expect(routeFromPath('/nimporte-quoi')).toBe('home')
+  })
+})

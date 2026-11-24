@@ -1,0 +1,15 @@
+name: Contact, legal or removal request / Contact, demande légale ou de retrait
+description: Questions to the publisher, legal notices, content removal. / Question à l'éditeur, signalement, demande de retrait.
+labels: [contact]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the contact channel listed in the site's legal notice. Do not post personal data here: issues are public.
+        Ceci est le canal de contact indiqué dans les mentions légales du site. Ne publiez pas de donnée personnelle : les issues sont publiques.
+  - type: textarea
+    id: message
+    attributes:
+      label: Your message / Votre message
+    validations:
+      required: true

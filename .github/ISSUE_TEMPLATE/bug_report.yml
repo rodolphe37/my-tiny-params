@@ -1,0 +1,28 @@
+name: Bug report / Signaler un bug
+description: Something doesn't work as expected. / Quelque chose ne fonctionne pas comme prévu.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / Que s'est-il passé ?
+      description: Describe the problem and what you expected. / Décrivez le problème et ce que vous attendiez.
+    validations:
+      required: true
+  - type: textarea
+    id: url
+    attributes:
+      label: Example URL / URL d'exemple
+      description: The URL you tried to shorten or decode (remove anything private). / L'URL concernée (sans donnée privée).
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: Browser and version / Navigateur et version
+      placeholder: Chrome 131, Safari 18 (iPhone)…
+  - type: input
+    id: version
+    attributes:
+      label: App version / Version de l'app
+      description: Shown in the footer. / Affichée dans le pied de page.
+      placeholder: v0.3.1

@@ -48,7 +48,6 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang
-    document.title = translate(lang, 'meta.title')
     document.querySelector('meta[name="description"]')?.setAttribute('content', translate(lang, 'meta.description'))
   }, [lang])
 

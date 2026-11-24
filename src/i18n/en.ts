@@ -18,6 +18,12 @@ export const en: Record<Key, string> = {
   'tab.settings': 'Settings',
   'footer': 'MyTinyParams v{version} · 100% local, no data ever leaves your browser',
 
+  'footer.legal': 'Legal notice',
+  'footer.terms': 'Terms',
+  'footer.source': 'Source code (MIT)',
+  'legal.back': '← Back to the app',
+  'legal.updated': 'Last updated: {date}',
+
   'fmt.pct': '{n}%',
   'common.copy': 'Copy',
   'common.copied': '✓ Copied',

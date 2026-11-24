@@ -17,6 +17,12 @@ export const fr = {
   'tab.settings': 'Réglages',
   'footer': 'MyTinyParams v{version} · 100 % local, aucune donnée ne quitte votre navigateur',
 
+  'footer.legal': 'Mentions légales',
+  'footer.terms': 'CGU',
+  'footer.source': 'Code source (MIT)',
+  'legal.back': '← Retour à l’application',
+  'legal.updated': 'Dernière mise à jour : {date}',
+
   'fmt.pct': '{n} %',
   'common.copy': 'Copier',
   'common.copied': '✓ Copié',
