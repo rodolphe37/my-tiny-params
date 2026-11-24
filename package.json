@@ -1,11 +1,11 @@
 {
   "name": "my-tiny-params",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Shorten URL parameters without touching the domain or breaking UTM tracking.",
   "author": "Rodolphe Augusto",
   "license": "MIT",
-  "homepage": "https://github.com/rodolphe37/my-tiny-params#readme",
+  "homepage": "https://mytinyparams.netlify.app/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rodolphe37/my-tiny-params.git"

@@ -8,12 +8,15 @@
 Shrink the query string of any URL — UTM and click-ID tracking included — **without ever touching the domain**.
 
 [![CI](https://github.com/rodolphe37/my-tiny-params/actions/workflows/ci.yml/badge.svg)](https://github.com/rodolphe37/my-tiny-params/actions/workflows/ci.yml)
+[![Live demo](https://img.shields.io/badge/demo-mytinyparams.netlify.app-00c7b7.svg?logo=netlify&logoColor=white)](https://mytinyparams.netlify.app/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-4338ca.svg)](LICENSE)
 [![PWA](https://img.shields.io/badge/PWA-installable-0a136e.svg)](#-installable-pwa)
 [![i18n](https://img.shields.io/badge/i18n-fr%20%7C%20en-1d8cf8.svg)](#-bilingual)
 [![Made with React + Vite + TypeScript](https://img.shields.io/badge/React%20·%20Vite%20·%20TypeScript-7c3aed.svg)](package.json)
 
 **English** · [Français](README.fr.md)
+
+### 🌐 [**Try it live → mytinyparams.netlify.app**](https://mytinyparams.netlify.app/)
 
 </div>
 
@@ -177,7 +180,7 @@ service worker / manifest / `index.html`, long-term cache for fingerprinted asse
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rodolphe37/my-tiny-params)
 
-Any static host works (Vercel, Cloudflare Pages, GitHub Pages…): serve `dist/` and route unknown paths to `index.html`.
+The official instance runs at **[mytinyparams.netlify.app](https://mytinyparams.netlify.app/)**. Any static host works (Vercel, Cloudflare Pages, GitHub Pages…): serve `dist/` and route unknown paths to `index.html`.
 `/version.json` tells which version is live.
 
 ## 🛠️ Tech stack

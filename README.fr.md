@@ -8,12 +8,15 @@
 Raccourcissez la chaîne de paramètres de n'importe quelle URL — UTM et identifiants de clic compris — **sans jamais toucher au domaine**.
 
 [![CI](https://github.com/rodolphe37/my-tiny-params/actions/workflows/ci.yml/badge.svg)](https://github.com/rodolphe37/my-tiny-params/actions/workflows/ci.yml)
+[![Démo en ligne](https://img.shields.io/badge/démo-mytinyparams.netlify.app-00c7b7.svg?logo=netlify&logoColor=white)](https://mytinyparams.netlify.app/)
 [![Licence : MIT](https://img.shields.io/badge/licence-MIT-4338ca.svg)](LICENSE)
 [![PWA](https://img.shields.io/badge/PWA-installable-0a136e.svg)](#-pwa-installable)
 [![i18n](https://img.shields.io/badge/i18n-fr%20%7C%20en-1d8cf8.svg)](#-bilingue)
 [![Fait avec React + Vite + TypeScript](https://img.shields.io/badge/React%20·%20Vite%20·%20TypeScript-7c3aed.svg)](package.json)
 
 [English](README.md) · **Français**
+
+### 🌐 [**Essayer en ligne → mytinyparams.netlify.app**](https://mytinyparams.netlify.app/)
 
 </div>
 
@@ -177,7 +180,7 @@ pour le service worker / manifeste / `index.html`, cache longue durée pour les 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rodolphe37/my-tiny-params)
 
-Tout hébergeur statique convient (Vercel, Cloudflare Pages, GitHub Pages…) : servez `dist/` et renvoyez les chemins inconnus vers `index.html`.
+L'instance officielle tourne sur **[mytinyparams.netlify.app](https://mytinyparams.netlify.app/)**. Tout hébergeur statique convient (Vercel, Cloudflare Pages, GitHub Pages…) : servez `dist/` et renvoyez les chemins inconnus vers `index.html`.
 `/version.json` indique la version en ligne.
 
 ## 🛠️ Technologies
