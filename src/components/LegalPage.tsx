@@ -41,6 +41,14 @@ export function LegalPage({ kind, onBack }: { kind: 'legal' | 'terms'; onBack: (
           {s.body.map((p, i) => (
             <p key={i}>{linkify(p)}</p>
           ))}
+          {s.action === 'audience-reset' && (
+            <p>
+              {/* Géré par public/mesure-audience.js : oublie le choix et recharge la page pour reposer la question. */}
+              <button type="button" className="btn btn-ghost" data-audience-reset>
+                {t('legal.audienceReset')}
+              </button>
+            </p>
+          )}
         </section>
       ))}
     </article>

@@ -4,6 +4,8 @@ import type { Lang } from './index'
 export interface Section {
   title: string
   body: string[]
+  /** Bouton sous la section : « Changer mon choix » de la mesure d'audience (géré par public/mesure-audience.js). */
+  action?: 'audience-reset'
 }
 export interface LegalDoc {
   title: string
@@ -24,7 +26,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
   fr: {
     legal: {
       title: 'Mentions légales',
-      updated: '24 novembre 2026',
+      updated: '26 novembre 2026',
       sections: [
         {
           title: 'Éditeur du site',
@@ -53,11 +55,20 @@ export const legalDocs: Record<Lang, LegalDocs> = {
         {
           title: 'Données personnelles et stockage local',
           body: [
-            'MyTinyParams fonctionne entièrement dans votre navigateur : les URLs que vous saisissez ne sont ni envoyées, ni enregistrées sur un serveur. Il n’y a ni compte utilisateur, ni outil de mesure d’audience, ni cookie, ni publicité.',
+            'MyTinyParams fonctionne entièrement dans votre navigateur : les URLs que vous saisissez ne sont ni envoyées, ni enregistrées sur un serveur. Il n’y a ni compte utilisateur, ni cookie publicitaire, ni publicité ; la seule mesure d’audience, décrite ci-dessous, ne fonctionne qu’avec votre accord.',
             'L’application mémorise uniquement sur votre appareil (stockage local du navigateur) vos préférences : langue, thème, réglages de raccourcissement et alias, et la fermeture de l’invitation d’installation. Ces données purement techniques ne quittent jamais votre appareil et sont supprimées en vidant les données du site dans votre navigateur.',
             'Comme tout hébergeur, Netlify peut traiter des données techniques de connexion (adresse IP, date, pages demandées) pour assurer le fonctionnement et la sécurité du service. L’éditeur n’exploite pas ces journaux à d’autres fins. Voir la politique de confidentialité de Netlify : https://www.netlify.com/privacy/',
-            'Conformément au RGPD et à la loi Informatique et Libertés, vous disposez de droits d’accès, de rectification et d’effacement de vos données ; en l’absence de collecte par l’éditeur, ils s’exercent surtout auprès de l’hébergeur. Vous pouvez aussi saisir la CNIL (https://www.cnil.fr).',
+            'Conformément au RGPD et à la loi Informatique et Libertés, vous disposez de droits d’accès, de rectification et d’effacement de vos données ; hormis la mesure d’audience (bouton « Changer mon choix » ci-dessous), l’éditeur ne collecte rien : ils s’exercent surtout auprès de l’hébergeur. Vous pouvez aussi saisir la CNIL (https://www.cnil.fr).',
           ],
+        },
+        {
+          title: 'Mesure d’audience',
+          body: [
+            'Pour savoir combien de personnes visitent ce site et quelles pages leur sont utiles, nous comptons les visites avec MyAnalyticsPro, un outil de mesure développé par l’éditeur, seulement si vous l’acceptez dans la bannière affichée à votre première visite. Tant que vous n’avez pas cliqué « Accepter », rien n’est envoyé ; si vous refusez, rien ne l’est jamais.',
+            'Seules les visites sont mesurées : l’adresse de la page (/, /legal ou /terms, sans ce qui suit le « ? ») et le temps passé dessus, la page ou le site d’où vous venez, le type d’appareil et de navigateur, le pays et la ville déduits de votre adresse IP (l’adresse elle-même n’est pas enregistrée avec la visite). Jamais les URLs que vous saisissez ni vos réglages.',
+            'Sur votre appareil, un cookie analytics_consent retient votre choix pendant 13 mois, et un identifiant de visite (_ap_sid) est effacé dès que vous fermez l’onglet. Le script est servi par Netlify, et les mesures sont reçues par le serveur de MyAnalyticsPro, hébergé par Render à Francfort (Allemagne, Union européenne). Elles ne servent qu’à des statistiques d’ensemble, et ne sont ni vendues ni partagées. Base légale : votre consentement.',
+          ],
+          action: 'audience-reset',
         },
         {
           title: 'Droit applicable',
@@ -67,7 +78,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
     },
     terms: {
       title: 'Conditions générales d’utilisation',
-      updated: '24 novembre 2026',
+      updated: '26 novembre 2026',
       sections: [
         {
           title: '1. Objet',
@@ -113,7 +124,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
         },
         {
           title: '8. Données personnelles',
-          body: ['Le service ne collecte aucune donnée personnelle. Le détail du stockage local et de l’hébergement figure dans les mentions légales.'],
+          body: ['Le service ne collecte aucune donnée personnelle, hormis une mesure d’audience des visites, seulement avec votre accord. Le détail du stockage local et de l’hébergement figure dans les mentions légales.'],
         },
         {
           title: '9. Modification des CGU',
@@ -131,7 +142,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
   en: {
     legal: {
       title: 'Legal notice',
-      updated: 'November 24, 2026',
+      updated: 'November 26, 2026',
       sections: [
         {
           title: 'Publisher',
@@ -160,11 +171,20 @@ export const legalDocs: Record<Lang, LegalDocs> = {
         {
           title: 'Personal data and local storage',
           body: [
-            'MyTinyParams runs entirely in your browser: the URLs you enter are neither sent to nor stored on a server. There are no user accounts, no audience measurement tools, no cookies and no advertising.',
+            'MyTinyParams runs entirely in your browser: the URLs you enter are neither sent to nor stored on a server. There are no user accounts, no advertising cookies and no advertising; the only audience measurement, described below, runs only with your consent.',
             'The application only remembers, on your device (browser local storage), your preferences: language, theme, shortening settings and aliases, and whether you dismissed the install prompt. This purely technical data never leaves your device and is erased by clearing the site data in your browser.',
             'Like any hosting provider, Netlify may process technical connection data (IP address, date, requested pages) to operate and secure the service. The publisher does not use these logs for any other purpose. See Netlify’s privacy policy: https://www.netlify.com/privacy/',
-            'Under the GDPR and French data protection law, you have rights of access, rectification and erasure of your data; as the publisher collects none, they mostly apply to the hosting provider. You may also lodge a complaint with the CNIL (https://www.cnil.fr) or your local data protection authority.',
+            'Under the GDPR and French data protection law, you have rights of access, rectification and erasure of your data; apart from audience measurement (the “Change my choice” button below), the publisher collects nothing, so they mostly apply to the hosting provider. You may also lodge a complaint with the CNIL (https://www.cnil.fr) or your local data protection authority.',
           ],
+        },
+        {
+          title: 'Audience measurement',
+          body: [
+            'To know how many people visit this site and which pages are useful to them, we count visits with MyAnalyticsPro, a measurement tool built by the publisher, only if you accept it in the banner shown on your first visit. Until you click “Accept”, nothing is sent; if you refuse, nothing ever is.',
+            'Only visits are measured: the page address (/, /legal or /terms, without anything after “?”) and time spent on it, the page or site you came from, device and browser type, and the country and city derived from your IP address (the address itself is not stored with the visit). Never the URLs you enter or your settings.',
+            'On your device, an analytics_consent cookie remembers your choice for 13 months, and a visit identifier (_ap_sid) is deleted when you close the tab. The script is served by Netlify, and measurements are received by the MyAnalyticsPro server, hosted by Render in Frankfurt (Germany, European Union). They are only used for aggregate statistics and are never sold or shared. Legal basis: your consent.',
+          ],
+          action: 'audience-reset',
         },
         {
           title: 'Governing law',
@@ -174,7 +194,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
     },
     terms: {
       title: 'Terms of use',
-      updated: 'November 24, 2026',
+      updated: 'November 26, 2026',
       sections: [
         {
           title: '1. Purpose',
@@ -220,7 +240,7 @@ export const legalDocs: Record<Lang, LegalDocs> = {
         },
         {
           title: '8. Personal data',
-          body: ['The service does not collect any personal data. Details on local storage and hosting are in the legal notice.'],
+          body: ['The service does not collect any personal data, apart from audience measurement of visits, only with your consent. Details on local storage and hosting are in the legal notice.'],
         },
         {
           title: '9. Changes to these terms',

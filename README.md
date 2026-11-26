@@ -75,7 +75,7 @@ flowchart LR
 - **Batch mode** — one URL per line, "Copy all" and CSV export.
 - **Ready-to-paste decoders** — browser snippet (HTML / GTM) and server / edge function (Next.js middleware, Cloudflare Worker…).
 - **Safe by construction** — collision with an existing `tp` parameter is handled; a short URL is only returned if it is really shorter.
-- **100 % local** — your URLs never leave your browser. No tracking, no cookies.
+- **100 % local** — your URLs never leave your browser. No advertising cookies; visits to the public site are counted (MyAnalyticsPro) only if the visitor accepts.
 
 ### 📲 Installable PWA
 

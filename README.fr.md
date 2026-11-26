@@ -75,7 +75,7 @@ flowchart LR
 - **Mode lot** — une URL par ligne, « Tout copier » et export CSV.
 - **Décodeurs prêts à coller** — snippet navigateur (HTML / GTM) et fonction serveur / edge (middleware Next.js, Cloudflare Worker…).
 - **Sûr par construction** — collision avec un paramètre `tp` existant gérée ; une URL courte n'est rendue que si elle est réellement plus courte.
-- **100 % local** — vos URLs ne quittent jamais votre navigateur. Ni suivi, ni cookies.
+- **100 % local** — vos URLs ne quittent jamais votre navigateur. Aucun cookie publicitaire ; les visites du site public ne sont comptées (MyAnalyticsPro) que si le visiteur l’accepte.
 
 ### 📲 PWA installable
 

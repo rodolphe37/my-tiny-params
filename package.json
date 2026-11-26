@@ -1,7 +1,7 @@
 {
   "name": "my-tiny-params",
   "private": true,
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Shorten URL parameters without touching the domain or breaking UTM tracking.",
   "author": "Rodolphe Augusto",
   "license": "MIT",

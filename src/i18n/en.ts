@@ -16,13 +16,14 @@ export const en: Record<Key, string> = {
   'tab.decode': 'Decode',
   'tab.integrate': 'Integration',
   'tab.settings': 'Settings',
-  'footer': 'MyTinyParams v{version} · 100% local, no data ever leaves your browser',
+  'footer': 'MyTinyParams v{version} · 100% local, your URLs never leave your browser',
 
   'footer.legal': 'Legal notice',
   'footer.terms': 'Terms',
   'footer.source': 'Source code (MIT)',
   'legal.back': '← Back to the app',
   'legal.updated': 'Last updated: {date}',
+  'legal.audienceReset': 'Change my choice',
 
   'fmt.pct': '{n}%',
   'common.copy': 'Copy',
